@@ -153,8 +153,70 @@ footer {
 /* Ajuste para PC para asegurar que los botones siempre estén arriba */
 @media (min-width: 768px) {
     .top-nav {
-        /* Puedes alinear los botones a la izquierda en PC si quieres */
-        justify-content: flex-start;
-        padding-left: 20px;
-    }
+    display: flex; 
+    /* Esta línea clave separa los elementos a los extremos */
+    justify-content: space-between; 
+    
+    /* Añadimos un poco de padding horizontal para que no se peguen a los bordes */
+    padding: 10px 25px; 
+    
+    margin-bottom: 15px; 
+}
+}
+
+/* Clase específica para el contenido de la carta */
+.carta-vieja {
+    /* Color de fondo que simula papel viejo o pergamino */
+    background-color: #fcf9e3; 
+    
+    /* Borde más elegante, como cera de sellado */
+    border: 5px solid #D9C3A0; 
+    
+    /* Añade una ligera sombra interna y externa para profundidad */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(156, 39, 61, 0.1);
+    
+    /* Usa la fuente Georgia o Serif para un look de carta manuscrita */
+    font-family: 'Georgia', serif; 
+    line-height: 1.6;
+    color: #583e29; /* Tono de tinta vieja */
+}
+
+.carta-titulo {
+    color: #9C273D; /* Color Vino */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    border-bottom: 2px dashed #D9C3A0; /* Línea de separación sutil */
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.carta-fecha {
+    font-style: italic;
+    color: #795548;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.carta-parrafo {
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+.firma {
+    text-align: right;
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #9C273D;
+}
+
+/* Reajustar el botón de cerrar para que contraste con el nuevo fondo */
+.carta-vieja .close-btn {
+    color: #583e29; 
+}
+.carta-vieja .close-btn:hover {
+    color: #9C273D; 
 }
