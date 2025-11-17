@@ -1,11 +1,11 @@
 CANCIONES_DATA = [
     {
         "id": 1,
-        "titulo": "Bohemian Rhapsody",
-        "artista": "Queen",
-        "genero": "Rock",
-        "youtube_url": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ", 
-        "spotify_id": "6sHn5G9k3R8FmFj2v0D2hI" 
+        "titulo": "There's Only You",
+        "artista": "Above & Beyond",
+        "lo que me hace sentir": "Me hace pensar en ti en mis momentos mas dificiles",
+        "youtube_url": "https://www.youtube.com/watch?v=AQ3tw7I42dA&list=RDAQ3tw7I42dA&start_radio=1", 
+        "spotify_id": "638ZYZKHJFGgAircZnBRPl" 
     },
     {
         "id": 2,
