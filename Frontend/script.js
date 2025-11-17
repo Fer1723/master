@@ -23,7 +23,7 @@ async function cargarCanciones() {
             card.innerHTML = `
                 <h3>${cancion.titulo}</h3>
                 <p><strong>Artista:</strong> ${cancion.artista}</p>
-                <p><strong>Lo que me hace sentir:</strong> ${cancion.genero}</p>
+                <p><strong>Lo que me hace sentir:</strong> ${cancion.pensamiento}</p>
                 <div class="links">
                     <a href="${cancion.youtube_url}" target="_blank" class="link-btn youtube-btn">
                         Ver en YouTube
