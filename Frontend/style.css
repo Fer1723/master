@@ -1,75 +1,125 @@
+/* --- PALETA DE COLORES ROMÁNTICA --- */
+/*
+  Rosa Suave: #F4E7EB (Fondo)
+  Rojo Pasión / Vino: #9C273D (Acentos)
+  Dorado/Beige Cálido: #D9C3A0 (Detalles/Bordes)
+  Blanco Cremoso: #FFFFFF (Tarjetas)
+*/
+
 /* --- ESTILOS BASE (Móvil Primero) --- */
 body {
-    font-family: sans-serif;
+    font-family: 'Georgia', serif; /* Fuente más clásica y elegante */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #F4E7EB; /* Rosa Suave */
+    color: #4A4A4A; /* Gris oscuro suave */
 }
 
 header {
-    background-color: #333;
+    background-color: #9C273D; /* Rojo Pasión/Vino */
     color: white;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Añadir una fuente elegante si es posible */
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 2px;
 }
 
 #canciones-container {
     padding: 20px;
-    /* En móvil, las tarjetas se apilan */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px; /* Más espacio para respirar */
 }
 
+/* Estilo para las Tarjetas de Canciones */
 .cancion-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF; /* Blanco Cremoso */
+    border: 2px solid #D9C3A0; /* Borde Dorado/Beige Cálido */
+    border-radius: 15px; /* Bordes más suaves y redondeados */
+    padding: 25px;
+    box-shadow: 0 8px 15px rgba(156, 39, 61, 0.2); /* Sombra con toque de color Pasión */
+    transition: transform 0.3s ease-in-out; /* Animación al pasar el ratón */
+}
+
+.cancion-card:hover {
+    transform: translateY(-5px); /* Efecto de "levantamiento" sutil */
+    box-shadow: 0 12px 20px rgba(156, 39, 61, 0.3);
+}
+
+.cancion-card h3 {
+    color: #9C273D; /* Títulos en color Vino */
+    font-family: 'Playfair Display', serif;
+    margin-top: 0;
+    font-size: 1.5em;
 }
 
 .links {
-    margin-top: 15px;
+    margin-top: 20px;
     display: flex;
-    gap: 10px;
-    flex-direction: column; /* Apilados en móvil */
+    gap: 15px;
+    flex-direction: column; 
 }
 
+/* Estilo para los Botones de Enlace */
 .link-btn {
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 18px;
+    border-radius: 25px; /* Botones pill-shaped (forma de píldora) */
     text-align: center;
     font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 .youtube-btn {
-    background-color: #FF0000;
+    background-color: #FF6B6B; /* Rojo Corazón (más suave que el rojo de YouTube) */
     color: white;
+    border: 2px solid #FF6B6B;
+}
+
+.youtube-btn:hover {
+    background-color: #9C273D; /* Pasa a color Vino al hover */
+    border-color: #9C273D;
 }
 
 .spotify-btn {
     background-color: #1DB954;
     color: white;
+    border: 2px solid #1DB954;
+}
+
+.spotify-btn:hover {
+    background-color: #0F7236; /* Verde Spotify más oscuro al hover */
+    border-color: #0F7236;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #9C273D;
+    font-size: 0.9em;
 }
 
 
 /* --- MEDIA QUERY (Diseño Responsive para PC/Tablet) --- */
 @media (min-width: 768px) {
-    /* En pantallas más grandes, usa una cuadrícula */
+    
     #canciones-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-        gap: 25px;
-        max-width: 1200px; 
-        margin: 20px auto;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Tarjetas ligeramente más grandes */
+        gap: 35px;
+        max-width: 1400px; /* Aumenta el ancho máximo */
+        margin: 40px auto; /* Más margen para centrar */
     }
 
-    /* En PC, coloca los botones de enlace en línea */
     .links {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
