@@ -105,6 +105,32 @@ footer {
     color: #9C273D;
     font-size: 0.9em;
 }
+/* --- ESTILOS PARA LOS BOTONES DE NAVEGACIÓN SUPERIOR --- */
+
+.top-nav {
+    display: flex; /* Permite alinear los elementos en una fila */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre los botones */
+    margin-bottom: 15px; /* Espacio debajo de los botones antes del título H1 */
+    padding: 10px 0;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: white; /* Color de texto blanco para contrastar con el fondo vino */
+    background-color: #D9C3A0; /* Dorado/Beige Cálido para el fondo del botón */
+    padding: 8px 15px;
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #F4E7EB; /* Rosa Suave al pasar el ratón */
+    color: #9C273D; /* Texto color Vino al pasar el ratón */
+}
 
 
 /* --- MEDIA QUERY (Diseño Responsive para PC/Tablet) --- */
@@ -121,5 +147,14 @@ footer {
     .links {
         flex-direction: row;
         justify-content: space-around;
+    }
+}
+
+/* Ajuste para PC para asegurar que los botones siempre estén arriba */
+@media (min-width: 768px) {
+    .top-nav {
+        /* Puedes alinear los botones a la izquierda en PC si quieres */
+        justify-content: flex-start;
+        padding-left: 20px;
     }
 }
