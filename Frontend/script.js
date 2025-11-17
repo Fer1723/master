@@ -23,7 +23,7 @@ async function cargarCanciones() {
             card.innerHTML = `
                 <h3>${cancion.titulo}</h3>
                 <p><strong>Artista:</strong> ${cancion.artista}</p>
-                <p><strong>Género:</strong> ${cancion.genero}</p>
+                <p><strong>Lo que me hace sentir:</strong> ${cancion.genero}</p>
                 <div class="links">
                     <a href="${cancion.youtube_url}" target="_blank" class="link-btn youtube-btn">
                         Ver en YouTube
@@ -39,7 +39,7 @@ async function cargarCanciones() {
     } catch (error) {
         // Manejo de errores si el backend no está corriendo
         console.error("Error al cargar las canciones:", error);
-        container.innerHTML = '<h2>🚨 Error al conectar con la API. Asegúrate que Flask esté corriendo en el puerto 5000.</h2>';
+        container.innerHTML = '<h2>🚨 Error al cargar la aplicación, intentelo mas tarde</h2>';
     }
 }
 
