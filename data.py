@@ -62,7 +62,7 @@ CANCIONES_DATA = [
         "id": 8,
         "titulo": "Leave my hand",
         "artista": "MaRLo",
-        "pensamiento": "Me recuerda a todo lo que pasamos y como tu siempre sera mi promesa de que jamas ire a donde sea solo",
+        "pensamiento": "Me recuerda a todo lo que pasamos y como tu siempre sera mi promesa de que jamas ire a donde sea solo.",
         "youtube_url": "https://www.youtube.com/watch?v=AyjPw4CKj5g&list=RDAyjPw4CKj5g&start_radio=1",
         "spotify_id": "6yvHeT9lVpJ58y8WDL8F7r"
 
@@ -71,7 +71,7 @@ CANCIONES_DATA = [
         "id": 9,
         "titulo": "You and Me",
         "artista": "MaRLo",
-        "pensamiento": "Me recuerda como tu eres, en este mundo caotico, lo unico que complementa mi universo, como somos Tu & Yo",
+        "pensamiento": "Me recuerda como tu eres, en este mundo caotico, lo unico que complementa mi universo, como somos Tu & Yo.",
         "youtube_url": "https://www.youtube.com/watch?v=11zl0Cvb4Ng&list=RD11zl0Cvb4Ng&start_radio=1",
         "spotify_id": "2AAMgG3DPe0VSaGOBRjuKj"
 
@@ -80,9 +80,27 @@ CANCIONES_DATA = [
         "id": 10,
         "titulo": "For all Time",
         "artista": "Armin Van Buuren",
-        "pensamiento": "Me recuerda como es que llegaste, como el destino te puso para que te quedes por todo el tiempo",
+        "pensamiento": "Me recuerda como es que llegaste, como el destino te puso para que te quedes por todo el tiempo.",
         "youtube_url": "https://www.youtube.com/watch?v=ZvffLHvbunc&list=RDZvffLHvbunc&start_radio=1",
         "spotify_id": "2mFXiHWO51YlBQyNYGcMsd"
+
+    },
+     {
+        "id": 11,
+        "titulo": "Flying By Candlelinght",
+        "artista": "Above & Beyond",
+        "pensamiento": "Me pone a penar lo a salvo que em encuentro contigo, lo confiado que estoy contigo.",
+        "youtube_url": "https://www.youtube.com/watch?v=HZFq0AHxi00&list=RDHZFq0AHxi00&start_radio=1",
+        "spotify_id": "3KUXIaTfoCDFfWInGEXjDF"
+
+    },
+     {
+        "id": 12,
+        "titulo": "I Need You",
+        "artista": "Armin Van Buuren",
+        "pensamiento": "Me hace pensar en clo adicto que soy a ti, en cuanto te necesito dia a dia.",
+        "youtube_url": "https://www.youtube.com/watch?v=ymouLq2IRVE&list=RDymouLq2IRVE&start_radio=1",
+        "spotify_id": "4cCpGAUlYDh88uuU7pcdN8"
 
     }
 ]
