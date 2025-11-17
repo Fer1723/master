@@ -1,5 +1,5 @@
 // La URL de tu API de Flask (debe coincidir con donde se está ejecutando el back-end)
-const API_URL = 'http://127.0.0.1:5000/api/canciones';
+const API_URL = 'https://canciones-solo-para-ti.onrender.com/api/canciones';
 const container = document.getElementById('canciones-container');
 
 // URL base para Spotify (debe coincidir con el formato que usa tu data.py)
