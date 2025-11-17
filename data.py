@@ -3,7 +3,7 @@ CANCIONES_DATA = [
         "id": 1,
         "titulo": "There's Only You",
         "artista": "Above & Beyond",
-        "lo que me hace sentir": "Me hace pensar en ti en mis momentos mas dificiles",
+        "pensamiento": "Me hace pensar en ti en mis momentos mas dificiles",
         "youtube_url": "https://www.youtube.com/watch?v=AQ3tw7I42dA&list=RDAQ3tw7I42dA&start_radio=1", 
         "spotify_id": "638ZYZKHJFGgAircZnBRPl" 
     },
