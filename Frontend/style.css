@@ -1,0 +1,75 @@
+/* --- ESTILOS BASE (Móvil Primero) --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#canciones-container {
+    padding: 20px;
+    /* En móvil, las tarjetas se apilan */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cancion-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.links {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column; /* Apilados en móvil */
+}
+
+.link-btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.youtube-btn {
+    background-color: #FF0000;
+    color: white;
+}
+
+.spotify-btn {
+    background-color: #1DB954;
+    color: white;
+}
+
+
+/* --- MEDIA QUERY (Diseño Responsive para PC/Tablet) --- */
+@media (min-width: 768px) {
+    /* En pantallas más grandes, usa una cuadrícula */
+    #canciones-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+        gap: 25px;
+        max-width: 1200px; 
+        margin: 20px auto;
+    }
+
+    /* En PC, coloca los botones de enlace en línea */
+    .links {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
