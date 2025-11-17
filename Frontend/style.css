@@ -214,9 +214,44 @@ footer {
 }
 
 /* Reajustar el botón de cerrar para que contraste con el nuevo fondo */
-.carta-vieja .close-btn {
-    color: #583e29; 
+.close-btn {
+    color: #9C273D;
+    float: right; /* Lo pone en la esquina superior derecha */
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 20px;
+    transition: color 0.3s;
+    cursor: pointer; /* Agregamos cursor para que parezca clickeable */
 }
-.carta-vieja .close-btn:hover {
-    color: #9C273D; 
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #D9C3A0;
+    text-decoration: none;
+}
+
+/* Contenedor principal del Modal */
+.modal {
+    display: none; /* ¡CRÍTICO! Esto oculta el pop-up por defecto */
+    position: fixed; /* Lo fija en la ventana del navegador */
+    z-index: 100; /* Asegura que esté por encima de todo (tarjetas, header, etc.) */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa todo el alto */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente y oscuro */
+}
+
+/* Contenido / Cuerpo del Modal */
+.modal-content {
+    background-color: #FFFFFF; /* Blanco Cremoso */
+    margin: 15% auto; /* 15% arriba y centrado horizontalmente */
+    padding: 30px;
+    border: 3px solid #9C273D; /* Borde color Vino */
+    width: 80%; /* Ancho en móvil */
+    max-width: 500px; /* Ancho máximo en PC */
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
 }

@@ -46,49 +46,49 @@ async function cargarCanciones() {
 // Iniciar la carga de datos al cargar la página
 cargarCanciones();
 
-// Selecciona el botón 'No me presiones' usando el atributo href="#acerca"
+// 1. MODAL 1: 'No me presiones' (#acercaModal)
+// ¡CORREGIDO! Declaración de la variable 'modal' faltante
+const modal = document.getElementById('acercaModal'); 
 const btn = document.querySelector('.nav-btn[href="#acerca"]'); 
+const closeBtnAcerca = modal.querySelector('.close-btn'); // Selector específico para el botón cerrar
 
-// Selecciona el botón de cerrar 'X'
-const span = document.getElementsByClassName('close-btn')[0];
+// 2. MODAL 2: 'Algo bonito' (#cartaModal)
+const cartaModal = document.getElementById('cartaModal');
+const cartaBtn = document.querySelector('.nav-btn[href="#favoritos"]'); 
+const closeBtnCarta = cartaModal.querySelector('.close-btn');
 
-// 2. Función para abrir el modal (al hacer clic en el botón)
+// --- ASIGNACIÓN DE EVENTOS ---
+
+// Evento para abrir el Modal 1 ('No me presiones')
 btn.onclick = function(e) {
-  e.preventDefault(); // Evita que el navegador salte a la ancla #acerca
+  e.preventDefault(); 
   modal.style.display = 'block';
 }
 
-// 3. Función para cerrar el modal (al hacer clic en la X)
-span.onclick = function() {
+// Evento para cerrar el Modal 1 (al hacer clic en la X)
+closeBtnAcerca.onclick = function() {
   modal.style.display = 'none';
 }
 
-// 4. Función para cerrar el modal (al hacer clic fuera de él)
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
-}
-
-const cartaModal = document.getElementById('cartaModal');
-const cartaBtn = document.querySelector('.nav-btn[href="#favoritos"]'); // Selecciona el botón 'Algo bonito'
-const cartaCloseSpan = cartaModal.querySelector('.close-btn');
-
-// 2. Función para abrir el modal de la Carta
+// Evento para abrir el Modal 2 ('Algo bonito')
 cartaBtn.onclick = function(e) {
-  e.preventDefault(); // Evita que el navegador salte a la ancla
+  e.preventDefault();
   cartaModal.style.display = 'block';
 }
 
-// 3. Función para cerrar el modal de la Carta (al hacer clic en la X)
-cartaCloseSpan.onclick = function() {
+// Evento para cerrar el Modal 2 (al hacer clic en la X)
+closeBtnCarta.onclick = function() {
   cartaModal.style.display = 'none';
 }
 
-// Modificar la función window.onclick para que también cierre el nuevo modal
+// Evento para cerrar cualquier modal al hacer clic fuera (CORREGIDO Y CONSOLIDADO)
 window.onclick = function(event) {
-  if (event.target == modal || event.target == cartaModal) {
+  // Cierra el Modal 1 si el clic es en el fondo del modal
+  if (event.target == modal) {
     modal.style.display = 'none';
-    cartaModal.style.display = 'none'; // Cierra también el modal de la carta
+  }
+  // Cierra el Modal 2 si el clic es en el fondo del modal
+  if (event.target == cartaModal) {
+    cartaModal.style.display = 'none';
   }
 }
